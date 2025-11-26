@@ -100,6 +100,33 @@
             padding: 10px;
             margin-top: 40px;
         }
+        /* Mobile responsiveness for form */
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+            }
+            form {
+                padding: 15px;
+            }
+            input, textarea, select {
+                padding: 15px;
+                font-size: 1.1em;
+                margin: 15px 0;
+            }
+            textarea {
+                rows: 4; /* Ensure textareas are taller on mobile */
+            }
+            button {
+                padding: 15px;
+                font-size: 1.2em;
+            }
+            .logo {
+                font-size: 2em;
+            }
+            .slogan {
+                font-size: 1.1em;
+            }
+        }
     </style>
     <script>
         function showThankYou() {
