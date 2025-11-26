@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TranspLink Logistics - Connecting America, One Load at a Time</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif; /* Bold modern sans-serif */
+            margin: 0;
+            padding: 0;
+            color: #0C1A36; /* Deep Navy */
+            background-color: #FFFFFF; /* White */
+            line-height: 1.6;
+        }
+        header {
+            background-color: #0C1A36; /* Deep Navy */
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .logo::before {
+            content: "🔗"; /* Chain-link icon placeholder; replace with image */
+            margin-right: 10px;
+        }
+        .slogan {
+            font-size: 1.2em;
+            color: #0074FF; /* Electric Blue */
+        }
+        nav {
+            background-color: #7A7F87; /* Steel Gray */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #FFFFFF;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #0074FF; /* Electric Blue */
+            border-bottom: 2px solid #0C1A36;
+            padding-bottom: 10px;
+        }
+        .mission-vision {
+            background-color: #F0F0F0; /* Light gray for emphasis */
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #0074FF;
+        }
+        form {
+            background-color: #F9F9F9;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        input, textarea, select {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #7A7F87;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #0074FF; /* Electric Blue */
+            color: #FFFFFF;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+        }
+        button:hover {
+            background-color: #0C1A36; /* Deep Navy */
+        }
+        .thank-you {
+            display: none;
+            color: #0074FF;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #0C1A36;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+    </style>
+    <script>
+        function showThankYou() {
+            document.getElementById('thank-you').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">TranspLink Logistics</div>
+        <div class="slogan">Connecting America, One Load at a Time.</div>
+    </header>
+    
+    <nav>
+        <a href="#apply">Apply Now</a>
+        <a href="#about">About Us</a>
+        <a href="#story">Our Story</a>
+    </nav>
+    
+    <section id="apply">
+        <h2>Apply for a Job at TranspLink Logistics</h2>
+        <p>Join our team of reliable drivers and logistics professionals. Fill out the form below to submit your application.</p>
+        <form action="https://formspree.io/your-email@example.com" method="POST" enctype="multipart/form-data" onsubmit="showThankYou()">  <!-- Replace with your Formspree URL -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+            
+            <label for="ssn">Social Security Number (SSN) - For Background Check (Required):</label>
+            <input type="text" id="ssn" name="ssn" pattern="\d{3}-\d{2}-\d{4}" placeholder="XXX-XX-XXXX" maxlength="11" required>
+            
+            <label for="experience">Years of Driving/Transport Experience:</label>
+            <input type="number" id="experience" name="experience" min="0">
+            
+            <label for="truck-experience">How many years of experience do you have driving trucks, and what type of license do you hold?</label>
+            <textarea id="truck-experience" name="truck-experience" rows="3" required></textarea>
+            
+            <label for="accidents">Have you had any accidents or violations in the past 3–5 years?</label>
+            <textarea id="accidents" name="accidents" rows="3" required></textarea>
+            
+            <label for="long-hours">Are you comfortable working long hours or long-distance trips when needed?</label>
+            <select id="long-hours" name="long-hours" required>
+                <option value="">Select Yes or No</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <label for="maintenance">Can you take responsibility for maintaining the truck in good condition (cleaning, inspections, reporting issues)?</label>
+            <textarea id="maintenance" name="maintenance" rows="3" required></textarea>
+            
+            <label for="availability">Availability:</label>
+            <select id="availability" name="availability">
+                <option value="full-time">Full-Time</option>
+                <option value="part-time">Part-Time</option>
+                <option value="contract">Contract</option>
+            </select>
+            
+            <label for="resume">Resume (Upload PDF or DOC - Optional):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+            
+            <label for="proof-address">Proof of Address (Upload PDF, JPG, or PNG - e.g., utility bill or ID - Required):</label>
+            <input type="file" id="proof-address" name="proof-address" accept=".pdf,.jpg,.jpeg,.png" required>
+            
+            <label for="license-front">Driving License (Front Side - Upload JPG or PNG - Required):</label>
+            <input type="file" id="license-front" name="license-front" accept=".jpg,.jpeg,.png" required>
+            
+            <label for="license-back">Driving License (Back Side - Upload JPG or PNG - Required):</label>
+            <input type="file" id="license-back" name="license-back" accept=".jpg,.jpeg,.png" required>
+            
+            <button type="submit">Submit Application</button>
+        </form>
+        <div id="thank-you" class="thank-you">
+            Thank you for your application! You will receive a message by email to complete your verification.
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>TranspLink Logistics is your nationwide transportation partner, offering dependable freight solutions that keep businesses moving. Whether you're shipping large-scale loads or managing time-sensitive deliveries, our network ensures safe, fast, and efficient transport across all 50 states.</p>
+        
+        <div class="mission-vision">
+            <h3>Mission</h3>
+            <p>Our company was built with one clear mission: to create a trucking business where drivers are respected, supported, and treated like true partners. We started with a small fleet and a strong work ethic—focusing on reliability, honesty, and delivering shipments on time.</p>
+            
+            <h3>Vision</h3>
+            <p>Our vision is to become one of the most trusted transportation companies in the region—known for safety, professionalism, and excellent service. We aim to build a workplace where drivers have stability, competitive earnings, and the opportunity to grow with us long-term. We want to expand our fleet, build stronger partnerships with clients, and continue raising the standards of the trucking industry.</p>
+            
+            <h3>Core Values</h3>
+            <ul>
+                <li><strong>Reliability:</strong> Deliver every load on time and in perfect condition.</li>
+                <li><strong>Integrity:</strong> Honest communication and ethical operations.</li>
+                <li><strong>Safety:</strong> Prioritizing the highest safety standards for drivers and cargo.</li>
+                <li><strong>Innovation:</strong> Using modern technology to optimize transport efficiency.</li>
+                <li><strong>Customer First:</strong> Providing exceptional service to every partner.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="story">
+        <h2>Our Story</h2>
+        <p>TranspLink Logistics began with a simple idea: America runs on transport—and businesses deserve a partner they can trust.</p>
+        <p>Over the years, we grew because of one simple belief: a successful company is built by successful drivers. That’s why we invest in our people, provide quality trucks, and make sure every driver feels valued.</p>
+        <p>Drivers choose us because we offer more than just a job—we offer a future.</p>
+        <ul>
+            <li>Top-quality trucks provided by the company</li>
+            <li>Monthly salary + fair commission on each trip</li>
+            <li>Strong support team for logistics, routes, and emergencies</li>
+            <li>Respectful work environment where drivers are treated as professionals</li>
+            <li>Stable, consistent work every month</li>
+            <li>Opportunities to grow and earn more with performance</li>
+        </ul>
+        <p>With us, drivers aren’t just employees—they’re part of a team that values their hard work and rewards it.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 TranspLink Logistics. Nationwide Operations. | 📧 support@transplink.shop | 🌐 transplink.shop</p>
+    </footer>
+</body>
+</html>
